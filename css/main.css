@@ -1,0 +1,267 @@
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    @media (min-width: 768px) {
+        .container {
+        width: 750px;
+        }
+    }
+    /* Medium */
+    @media (min-width: 992px) {
+        .container {
+        width: 970px;
+        }
+    }
+    /* Large */
+    @media (min-width: 1200px) {
+        .container {
+        width: 1170px;
+        }
+    } 
+    body{
+        background-image: linear-gradient(100deg, #575656, #062e3f);
+        font-family: 'Work Sans', sans-serif;
+    }
+    main {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 70px;
+    }
+
+    .To-Do-LIST .title{
+        letter-spacing: 0.20rem;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        color: #ffdfdb;
+    }
+    .form{
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        width: 100%;
+    }
+    .form button{
+        background-color: rgb(247, 226, 223);
+        color: rgb(0, 0, 0);
+        padding: 10px 25px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        padding: 10px;
+        font-size: 17px;
+        transition: box-shadow 0.3s;
+        border-radius: 15px;
+    }
+    .form button:hover{
+        background-color: white;
+        box-shadow: #fff8 0 0 10px; 
+    }
+
+    .form input {
+        padding: 25px; 
+        border: none;
+        outline: none;
+        width: 100%; 
+        max-width: 500px; 
+        background-color: #181a1a;
+        color: rgb(247, 226, 223);
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        font-size: 20px; 
+        border-radius: 15px;
+        margin: 5px;
+    }
+    .form input:nth-child(1) {
+        margin: 5px;
+        border-radius: 15px;
+    }
+    @media (max-width: 576px) {
+        .form input {
+            font-size: 16px; 
+            padding: 20px;
+        }
+    }
+
+    .result{
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .result .task{
+        background-color: rgb(26, 27, 27);
+        color: rgb(247, 226, 223);
+        padding: 25px;
+        border-radius: 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .result .task:not(:last-child){
+        margin-bottom: 20px;
+    }
+    .task .btns{
+        margin-left: 15px;
+    }
+    .task .btns button{
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        background-color: rgb(247, 226, 223);
+        border: none;
+        font-size: 20px;
+    }
+    .task .btns .delete{
+        margin-left: 5px;
+    }
+    .task .btns button:hover{
+        background-color: white;
+        box-shadow: #fff8 0 0 10px; 
+    }
+
+    .donetask{
+        text-decoration: line-through;
+    }
+
+    .day {
+        margin-bottom: 30px;
+        width: 100%;
+        max-width: 600px;
+        background-color: #1e1f1f;
+        padding: 20px;
+        border-radius: 14px;
+        color: #ffdfdb;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .day h3 {
+        margin-bottom: 15px;
+        text-align: left;
+        color: #ffdfdb;
+        border-bottom: 2px solid #ffdfdb;
+        padding-bottom: 10px;
+        font-size: 20px;
+    }
+    .delete-day {
+        background-color: #ff4d4d;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 10px;
+        transition: background-color 0.3s;
+    }
+    
+    .delete-day:hover {
+        background-color: #ff1a1a;
+    }
+    .day-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .note{
+        background-color: #181a1a;
+        color: rgb(247, 226, 223);
+        padding: 20px;
+        width: 300px;
+        margin: 0px auto;
+        border-radius: 15px;
+        position: relative;
+    }
+    .note  h1{
+    margin-bottom: 15px;
+    text-align: center;
+    color: #ffdfdb;
+    border-bottom: 2px solid #ffdfdb;
+    padding-bottom: 10px;
+    }
+
+/* .resultForNote span{
+    
+    
+} */
+
+.resultForNote div:not(:last-child){
+    margin-bottom: 10PX;
+    
+}
+
+.note input{
+    padding: 20px;
+    border: none;
+    outline: none;
+    width: 100%;
+    max-width: 500px;
+    background-color: #454545;
+    color: rgb(247, 226, 223);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    font-size: 20px;
+    border-radius: 15px;
+    margin: 10px auto;
+
+}
+
+
+.note button {
+    background-color: rgb(247, 226, 223);
+    color: rgb(0, 0, 0);
+    padding: 10px 25px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 17px;
+    transition: box-shadow 0.3s;
+    border-radius: 15px;
+}
+
+.note button:hover {
+    background-color: white;
+    box-shadow: #fff8 0 0 10px; 
+}
+
+
+.resultForNote > div{
+    
+    padding: 12px;
+    border-bottom: solid;
+
+}
+
+.btn-for-note{
+margin: 5px;
+}
+
+.btn-for-note button{
+    padding: 10px 25px;
+    margin: 3px;
+}
+
+
+.note .doneall {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    color: #0e680e;
+}
+
+.note .all {
+    position: absolute;
+    left: 10px;
+    bottom: 5px;
+    color: #680e19;
+}
