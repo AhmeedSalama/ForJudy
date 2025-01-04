@@ -87,14 +87,12 @@ document.addEventListener("click", function (e) {
         let taskOrNote = e.target.closest(".task, .resultForNote > div");
         if (taskOrNote) {
             taskOrNote.classList.toggle("donetask");
-            let countTasks = document.querySelectorAll(".donetask").length;
-            DoneAll.textContent = `Done ${countTasks}`;
-            let countAllTasks = document.querySelectorAll(".resultForNote  .taskNotee").length;
-            AllTasks.textContent = `ALL ${countAllTasks}`;
+            
+            // فقط حساب المهام داخل الملاحظات
+            updateNoteCounts();
+
             // حفظ التحديثات في localStorage
-            localStorage.setItem("countAllTasks", countAllTasks);
-            localStorage.setItem("countTasks", countTasks);
-            saveNotes();  // حفظ التحديثات بعد إتمام المهمة
+            saveNotes();
         }
     }
 });
@@ -115,7 +113,7 @@ addNote.onclick = function () {
         note.classList = `taskNotee`;
         let texNote = document.createTextNode(inbNote.value);
         note.appendChild(texNote);
-        
+
         // إضافة حاوية للأزرار
         let btnfornote = document.createElement("div");
         btnfornote.classList.add("btn-for-note");
@@ -134,14 +132,22 @@ addNote.onclick = function () {
         resultForNote.appendChild(note);
         inbNote.value = "";
 
-        // تحديث العد
-        let countAllTasks = document.querySelectorAll(".resultForNote  .taskNotee").length;
-        AllTasks.textContent = `ALL ${countAllTasks}`;
+        // تحديث العد للملاحظات فقط
+        updateNoteCounts();
 
         // حفظ التحديث في LocalStorage بعد إضافة الملاحظة
         saveNotes();
     }
 };
+
+// دالة لتحديث العد داخل قسم الملاحظات
+function updateNoteCounts() {
+    let countAllTasks = document.querySelectorAll(".resultForNote .taskNotee").length;
+    AllTasks.textContent = `ALL ${countAllTasks}`;
+    
+    let countTasks = document.querySelectorAll(".resultForNote .taskNotee.donetask").length;
+    DoneAll.textContent = `Done ${countTasks}`;
+}
 
 // دالة لحفظ الملاحظات والأيام في LocalStorage
 function saveNotes() {
@@ -170,6 +176,5 @@ window.onload = function() {
     }
 
     // حساب إجمالي المهام والملاحظات
-    let countAllTasks = document.querySelectorAll(".resultForNote  .taskNotee").length;
-    AllTasks.textContent = `ALL ${countAllTasks}`;
+    updateNoteCounts();
 };
