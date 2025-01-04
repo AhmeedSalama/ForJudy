@@ -287,3 +287,40 @@ margin: 5px;
         font-size: 25px;
     }
 }
+.funny-button {
+    background-color: #ff8c00; /* اللون البرتقالي المشرق */
+    color: rgb(247, 226, 223); /* اللون الفاتح للنص */
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Work Sans', sans-serif; /* نفس الخط المستخدم في التصميم */
+    margin: 15px;
+}
+
+.funny-button:hover {
+    background-color: #ff6347; /* تغيّر اللون إلى الأحمر عند المرور بالماوس */
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* تحسين الظل */
+}
+
+.funny-button:active {
+    transform: scale(0.95); /* تأثير عندما يتم الضغط */
+}
+
+.funny-button:focus {
+    outline: none; /* إزالة الخطوط عند التحديد */
+}
+
+
+.resultfunny{
+    background-color: rgb(26, 27, 27);
+    color: rgb(247, 226, 223);
+    padding: 25px;
+    border-radius: 14px;
+    align-items: center;
+    margin: 10px;
+}
