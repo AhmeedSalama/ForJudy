@@ -324,3 +324,10 @@ margin: 5px;
     align-items: center;
     margin: 10px;
 }
+.resultForNote {
+    width: 100%; /* يمكنك تعديل العرض حسب الحاجة */
+    max-height: 350px; /* ارتفاع ثابت مع السماح بالتمرير */
+    overflow-y: auto; /* تفعيل التمرير العمودي */
+    padding: 10px;  /*مسافة داخلية اختيارية */
+    box-sizing: border-box; /* للحفاظ على أبعاد العنصر */
+}
