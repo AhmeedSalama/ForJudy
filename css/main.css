@@ -265,3 +265,25 @@ margin: 5px;
     bottom: 5px;
     color: #680e19;
 }
+
+
+@media (max-width: 768px) {
+    .form {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+    .add-btn{
+        margin-top: 10px;
+    }
+    .result{
+        padding: 15px;
+    }
+    .To-Do-LIST .title{
+        font-size: 25px;
+    }
+}
